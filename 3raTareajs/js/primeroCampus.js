@@ -91,22 +91,22 @@ Nota: Tener en cuenta la función length y substring o charAt (developer mozilla
 
 /*10.- Escribe un programa que pida un número y nos diga si
  es divisible por 2, 3, 5 o 7 (sólo hay que comprobar si lo es por uno de los cuatro)
-*/
+
 const numero = prompt("Introduce un número:");
 
 
 if (numero % 2 == 0) {
-  document.write(`El número ${numero} es divisible por 2`);
+  document.write(`El número ${numero} es divisible por 2 <br>`);
 } if (numero % 3 == 0) {
-  document.write(`El número ${numero}  es divisible por 3`);
+  document.write(`El número ${numero}  es divisible por 3 <br>`);
 }
 if (numero % 5 == 0) {
-  document.write(`El número ${numero}  es divisible por 5`);
+  document.write(`El número ${numero}  es divisible por 5 <br>`);
 }
 else if (numero % 7 == 0) {
-  document.write(`El número ${numero} es divisible por 7`);
+  document.write(`El número ${numero} es divisible por 7 <br>`);
 } else {document.write(`El número ${numero} no es divisible por ninguno de los anteriores`);
-}
+}*/
 /*11.- Añadir al ejercicio anterior que nos diga por cuál de los cuatro es 
 divisible (hay que decir todos por los que es divisible)*/
 
