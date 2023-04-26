@@ -70,19 +70,47 @@ switch(nota){
  Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión
   -.
 
-Nota: usar confirm() https://www.w3schools.com/jsref/met_win_confirm.asp*/
+Nota: usar confirm() https://www.w3schools.com/jsref/met_win_confirm.asp
 
+let texto = '';
+let nuevoTexto;
 
+do {
+  nuevoTexto = prompt('Introduce una cadena de texto (presiona cancelar para salir):');
+  if (nuevoTexto !== null) {
+    texto += nuevoTexto + '-';
+  }
+} while (nuevoTexto !== null);
 
-
-
+alert('Las cadenas introducidas son: ' + texto.slice(0, -1));
+*/
 
 
 /*4- Realiza un script que pida números hasta que se pulse “cancelar”.
  Si no es un número deberá indicarse con un «alert» y seguir pidiendo números. 
  Al salir con “cancelar” deberá indicarse la suma total de los números introducidos.
-*/
 
+let suma = 0;
+
+while (true) {
+  let num = prompt("Introduce un número:");
+
+  if (num === null) {
+    break;
+  }
+
+  num = Number(num);
+
+  if (isNaN(num)) {
+    alert("Error: No has introducido un número válido.");
+    continue;
+  }
+
+  suma += num;
+}
+
+alert(`La suma total de los números introducidos es ${suma}.`);
+*/
 
 
 /*5- Realizar una página con un script que calcule el valor de 
@@ -106,6 +134,16 @@ Deberá de repetirse el proceso hasta que el usuario pulse «cancelar»*/
 4444
 55555
 666666
+
+for (let i = 1; i <= 30; i++) {
+  let fila = "";
+
+  for (let j = 1; j <= i; j++) {
+    fila += i;
+  }
+
+  document.write( `${fila}<br>`);
+}
 */
 
 /*7- Haz un script que escriba una pirámide inversa de los números 
@@ -118,7 +156,25 @@ del 1 al número que indique el usuario (no mayor de 50)  de la siguiente
 …..
 333
 22
-1*/
+1
+
+let num = prompt(`ingrese un numero hasta el 50`)
+
+for (let i = num; i >=1; i--) {
+  let fila = "";
+
+  for (let j = 1; j <= i; j++) {
+    fila += i;
+  }
+
+  document.write( `${fila}<br>`);
+}*/
+
+
+
+
+
+
 
 /*8- Crea script para generar pirámide siguiente con los números del 1
  al número que indique el usuario (no mayor de 50) 
@@ -130,6 +186,18 @@ del 1 al número que indique el usuario (no mayor de 50)  de la siguiente
 12345
 123456
 ……
+
+let filas = prompt("Ingrese un numero menor 50") 
+
+for (let i = 1; i <= filas; i++) {
+  let fila = "";
+
+  for (let j = 1; j <= i; j++) {
+    fila += j + " ";
+  }
+
+document.write( `${fila}<br>`)
+}
 */
 
 /*9- Crea un script que escriba los números del 1 al 500, 
@@ -150,6 +218,24 @@ una línea horizontal. Por ejemplo :
 10
 
 */
+
+let i = 1;
+while( i < 50){
+  document.write(`${i}<br>`)
+  if(i% 4 ===0 ){
+    document.write( `${i} multiplo de 4 <br>`)
+  }
+ if(i%9 ===0){
+  document.write(`${i} El numero es multiplo de 9<br>`)
+ } 
+ if(i%5===0){
+  document.write( `-----------------------------<br>`)
+ }
+ i= i +1;
+}
+
+
+
 /*10- Realiza un script que pida número de filas y columnas y escriba 
 una tabla. Dentro de cada una de las celdas deberá escribirse un número 
 consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los 
