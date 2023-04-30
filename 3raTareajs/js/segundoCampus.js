@@ -217,10 +217,10 @@ una línea horizontal. Por ejemplo :
 9 (Múltiplo de 9)
 10
 
-*/
+
 
 let i = 1;
-while( i < 50){
+while( i < 500){
   document.write(`${i}<br>`)
   if(i% 4 ===0 ){
     document.write( `${i} multiplo de 4 <br>`)
@@ -233,7 +233,7 @@ while( i < 50){
  }
  i= i +1;
 }
-
+*/
 
 
 /*10- Realiza un script que pida número de filas y columnas y escriba 
@@ -242,27 +242,107 @@ consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los
 números irán del 35 al 1.
 */
 
+
+
+
+
+
+
+
+
+
+
 /*11- Realiza un script que pida por teclado 3 edades y 3 nombres 
 e indique el nombre del mayor. *
 
 Nota: ver funcion Math() https://www.w3schools.com/js/js_math.asp
+
+ 
+let nombre1 = prompt(`Ingrese el primer nombre`)
+let edad1 = parseInt(prompt( `Ingrese la primera edad`))
+let nombre2 = prompt(`Ingrese el segundo nombre`)
+let edad2 = parseInt(prompt( `Ingrese la segunda edad`))
+let nombre3 = prompt(`Ingrese el tercer nombre`)
+let edad3 = parseInt(prompt( `Ingrese la tercera edad`))
+
+let edadMayor=(Math.max(edad1,edad2,edad3))
+
+if (edadMayor===edad1){
+  document.write( `El de mayor edad es  ${nombre1}`)
+} if(edadMayor===edad2){
+    document.write( `El de mayor edad es ${nombre2}`)
+}else if (edadMayor===edad3){
+  document.write( `El de mayor edad es ${nombre3}`)
+}
+
 */
+  
 
 /*12- Realiza un script que genere un número aleatorio entre 1 y 99
-*/
 
-/*13- Realiza un script que pida un texto y lo muestre en mayúsculas.*/
+
+
+let numeroAleatorio = Math.floor(Math.random() * 99) + 1;
+
+document.write( `El número aleatorio generado es  ${numeroAleatorio} `);*/
+
+
+/*13- Realiza un script que pida un texto y lo muestre en mayúsculas.
+
+let texto = prompt( `Escriba un texto`)
+
+let mayusculas = texto.toUpperCase()
+
+document.write( `${mayusculas}`)*/
+
 
 /*14- Realiza un script que pida una cadena de texto y lo muestre 
 poniendo el signo – entre cada carácter sin usar el método replace. 
 Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.
+
+
+let texto =  prompt ( `Agregar texto`)
+
+let textoAgregar = []
+
+ for(let i = 0 ; i<texto.length;i++){
+  textoAgregar += texto [i];
+  if( i !== texto.length -1){
+    textoAgregar += "-";
+  }
+  }
+document.write( `${textoAgregar}`)
+
 */
 
-/*15- Realiza un script que cuente el número de vocales que tiene un texto*/
+
+/*15- Realiza un script que cuente el número de vocales que tiene un texto
+
+
+let texto = prompt ( `Agregar texto`)
+let conteo = 0
+let caracterActual = ""
+
+for(let i=0 ; i < texto.length; i++){
+  caracterActual = texto[i].toLowerCase();
+   if(caracterActual === "a" || caracterActual === "e"|| caracterActual === "i" ||caracterActual === "o"|| caracterActual === "u"){
+       conteo ++;
+   }
+}
+  document.write( `la cantidad de vocales es ${conteo}`)
+  */
+
+
 
 /*16- Realiza un script que pida una cadena de texto y la devuelva al 
 revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.
 */
+
+let texto = prompt(`ingrese texto`)
+
+let revez = texto.reverse()
+
+document.write(`${[revez]}`)
 
 /*17- Realiza un script que muestre la posición de la primera vocal de un 
 texto introducido por teclado.
